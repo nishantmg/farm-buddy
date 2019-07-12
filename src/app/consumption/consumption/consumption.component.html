@@ -1,0 +1,34 @@
+<app-header></app-header>
+<ion-content>
+  <ion-card color="primary">
+    <ion-card-header>
+      <!-- <ion-card-subtitle></ion-card-subtitle> -->
+      <ion-card-title>Food Consumption</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+  
+    </ion-card-content>
+    <ion-item>
+      <ion-label>Food Name</ion-label>
+      <ion-label>Consumed Unit</ion-label>
+      <ion-label>Amount</ion-label>
+    </ion-item>
+    <ion-list>
+      <ion-item *ngFor="let consumption of consumptions; let i = index">
+        <!-- <ion-icon name="paw" slot="start"></ion-icon> -->
+        <!-- <ion-label>{{ i + 1 }}</ion-label> -->
+        <ion-label>{{ getFoodName(consumption) }}</ion-label>
+        <ion-label slot="end">{{ consumption.consumed_unit }}</ion-label>
+        <ion-label slot="end">{{ consumption.consumption_amount }}</ion-label>
+        <!-- <ion-label slot="end">{{ food.measurement_unit }}</ion-label> -->
+        <ion-button fill="outline" slot="end">View</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/consumption/consumption/add" color="danger">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<app-footer></app-footer>

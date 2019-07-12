@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<ion-content>
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-card-title>Vaccination</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <round-progress [current]="current" [max]="max" [color]="'#45ccce'" [background]="'#fff'" [radius]="100"
+        [stroke]="15" [semicircle]="false" [rounded]="true" [clockwise]="true" [responsive]="false" [duration]="800"
+        [animation]="'easeInOutQuart'" [animationDelay]="0" (onRender)="onRender($event)"></round-progress>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<app-footer></app-footer>

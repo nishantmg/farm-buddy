@@ -1,0 +1,24 @@
+<app-header></app-header>
+<ion-content>
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-card-title>Animal Type</ion-card-title>
+      <!-- <ion-card-subtitle>Animal Type</ion-card-subtitle> -->
+    </ion-card-header>
+    <ion-card-content>
+  
+    </ion-card-content>
+    <ion-item *ngFor="let animalType of animalTypes">
+      <!-- <ion-icon name="paw" slot="start"></ion-icon> -->
+      <ion-label>{{ animalType.animal_type }}</ion-label>
+      <ion-label slot="end">{{ animalType.short_name }}</ion-label>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/animals/animal-type-add" color="danger">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<app-footer></app-footer>

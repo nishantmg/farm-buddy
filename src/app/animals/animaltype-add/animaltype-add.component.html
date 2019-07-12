@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Farm Buddy
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Animal Type</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Animal Type Name</ion-label>
+        <ion-input placeholder="Animal Type Name" [(ngModel)]="animalType.animal_type"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Short Name</ion-label>
+        <ion-input placeholder="Animal Type Short Name" [(ngModel)]="animalType.short_name"></ion-input>
+      </ion-item>
+      <ion-text *ngIf="errorMsg" color="danger">{{ errorMsg }}</ion-text>
+      <ion-item>
+        <ion-button slot="end" type="button" color="primary" fill="outline" (click)="onSave()">Save</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

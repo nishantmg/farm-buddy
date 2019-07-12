@@ -1,0 +1,32 @@
+<app-header></app-header>
+<ion-content>
+  <ion-card color="primary">
+    <ion-card-header>
+      <!-- <ion-card-subtitle></ion-card-subtitle> -->
+      <ion-card-title>Production</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+  
+    </ion-card-content>
+    <ion-item>
+      <ion-label>Animal</ion-label>
+      <ion-label>Product</ion-label>
+      <ion-label>Unit|Amount</ion-label>
+      <ion-label>Action</ion-label>
+    </ion-item>
+    <ion-list>
+      <ion-item *ngFor="let production of productions; let i = index">
+        <ion-label>{{ getAnimalName(production) }}</ion-label>
+        <ion-label>{{ getProductName(production) }}</ion-label>
+        <ion-label slot="end">{{ production.production_unit }} | {{ production.production_amount }}</ion-label>
+        <ion-button fill="outline" slot="end">View</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/production/production/add" color="danger">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<app-footer></app-footer>

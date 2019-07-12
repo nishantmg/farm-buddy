@@ -1,0 +1,8 @@
+{
+  "name": "scratch",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "6b79b765"
+}

@@ -1,0 +1,20 @@
+<ion-app>
+    <ion-menu side="start" menuId="home-menu" contentId="content">
+        <ion-header>
+          <ion-toolbar color="primary">
+            <ion-title>Menu</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list>
+            <ion-item routerLink="/animals/animal"><ion-icon name="paw"></ion-icon>Animals</ion-item>
+            <ion-item routerLink="/animals/animal-type" >Animal Types</ion-item>
+            <ion-item routerLink="/animals/food">Food</ion-item>
+            <ion-item routerLink="/animals/product">Product</ion-item>
+            <ion-item routerLink="/consumption/consumption">Consumption</ion-item>
+            <ion-item routerLink="/production/production">Production</ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu> 
+  <ion-router-outlet id="content"></ion-router-outlet>
+</ion-app>

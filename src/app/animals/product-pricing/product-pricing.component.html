@@ -1,0 +1,33 @@
+<app-header></app-header>
+<ion-content>
+  <ion-card color="primary">
+    <ion-card-header>
+      <!-- <ion-card-subtitle></ion-card-subtitle> -->
+      <ion-card-title>Product's Prices</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+  
+    </ion-card-content>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-label>Type</ion-label>
+      <ion-label>Action</ion-label>
+    </ion-item>
+    <ion-list>
+      <ion-item *ngFor="let food of foods; let i = index">
+        <!-- <ion-icon name="paw" slot="start"></ion-icon> -->
+        <!-- <ion-label>{{ i + 1 }}</ion-label> -->
+        <ion-label>{{ food.food_name }}</ion-label>
+        <ion-label slot="end">{{ getAnimalType(animal) }}</ion-label>
+        <ion-button fill="outline" slot="end">View</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/animals/food/add" color="danger">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+</ion-content>
+
+<app-footer></app-footer>
